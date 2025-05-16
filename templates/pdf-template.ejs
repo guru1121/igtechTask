@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+   
+    .certificate {
+      border: 10px solid #007bff;
+      padding: 40px;
+      margin: 20px;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .logo img {
+      height: 100px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 28px;
+      color: #007bff;
+      font-weight: bold;
+     
+    }
+
+    .present_line {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .cert_name {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #b36b00;
+     
+    }
+
+    .cert_quote {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .detail_sec {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      margin-bottom: 30px;
+      font-size: 14px;
+    }
+
+    .footer {
+      display: flex;
+      margin-top: 40px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="certificate">
+    <div class="header">
+      <div class="left">
+        <p><span class="label">Register-Id:-</span> <%= data.registerId %></p>
+        <p><span class="label">E-Mail:</span> <%= data.email %></p>
+        <p><span class="label">Phone No.:</span> <%= data.phone %></p>
+      </div>
+      <div class="right" style="text-align: right;">
+        <p><%= data.address.line1 %></p>
+        <p><%= data.address.line2 %></p>
+        <p><%= data.address.city %></p>
+      </div>
+    </div>
+
+    <div class="logo">
+ <img src="http://localhost:4000/images/msme.png" alt="MSME Logo">
+
+    </div>
+
+    <div class="title">Certificate of Half Marathon</div>
+
+    <div class="present_line">This Certificate presented to</div>
+    <div class="cert_name"><%= data.name %></div>
+
+    <div class="cert_quote">
+      The certificate of achievement is awarded to individuals who have 
+      demonstrated outstanding performance in their field.Here's an example text
+for a certificate.
+    </div>
+
+    <div class="detail_sec">
+      <div><span class="label">Date of Birth:</span> <%= data.dob %></div>
+      <div><span class="label">Gender:</span> <%= data.gender %></div>
+      <div><span class="label">Blood Group:</span> <%= data.bloodGroup %></div>
+    </div>
+
+    <div class="footer">
+      <div class="left">
+        <p><%= data.timestamp %></p>
+        <p>DATE-TIME</p>
+      </div>
+
+      <div class="stamp">
+      <img src="http://localhost:4000/images/certified.png" alt="Certified Badge">
+      </div>
+
+      <div class="right">
+        <p>&nbsp;</p>
+        <p>_____________________</p>
+        <p>SIGNATURE</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
